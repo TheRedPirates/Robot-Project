@@ -29,7 +29,7 @@ public class TankDriveByJoystick extends Command {
 			rightSpeed = 0;
 		}
 
-		rightSpeed *= Math.abs(rightSpeed);
+		rightSpeed *= Math.abs(rightSpeed); // CR comment to explain WHY
 		leftSpeed *= Math.abs(leftSpeed);
 
 		Robot.drive.tank(leftSpeed, rightSpeed);

@@ -1,0 +1,8 @@
+* add .gitignore (AND removing files irrelevant to it)
+* the base folder of the repository needs to be the base folder of the project, NOT the entire workspace!
+
+Good work so far, team! look for comments with the word "CR" on the java code and rewrite.
+Don't forget to remove the comments when you're down. Also, remove other unnecessary comments.
+Notice that since the code often has similar parts, CR written for one class applies for other similar
+classes, even if it's not written there. We'll work on cutting down repeating code soon, and of course,
+keep working on our autonomous code.

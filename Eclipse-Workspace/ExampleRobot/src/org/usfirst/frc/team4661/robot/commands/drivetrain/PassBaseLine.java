@@ -6,9 +6,10 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class PassBaseLine extends Command {
+	// CR this class needs command that explain it.
 	double timeout;
-	double k1;
-	double p;
+	double k1; // CR rename
+	double p; // CR rename
 	double slowdownTime;
 	int counter;
 
@@ -20,7 +21,7 @@ public class PassBaseLine extends Command {
 		if (!SmartDashboard.containsKey(StringConsts.BASE_LINE_TIMEOUT)) {
 			SmartDashboard.putNumber(StringConsts.BASE_LINE_TIMEOUT, 2.65);
 		}
-		if (!SmartDashboard.containsKey(StringConsts.MATH_A)) {
+		if (!SmartDashboard.containsKey(StringConsts.MATH_A)) { // CR rename these consts.
 			SmartDashboard.putNumber(StringConsts.MATH_A, 1);
 		}
 		if (!SmartDashboard.containsKey(StringConsts.MATH_B)) {
@@ -34,6 +35,8 @@ public class PassBaseLine extends Command {
 	// Called just before this Command runs the first time
 	protected void initialize() {
 
+		// CR don't repeat yourselves.
+		
 		if (!SmartDashboard.containsKey(StringConsts.PASS_LINE_SPEED)) {
 			SmartDashboard.putNumber(StringConsts.PASS_LINE_SPEED, 0.4);
 		}

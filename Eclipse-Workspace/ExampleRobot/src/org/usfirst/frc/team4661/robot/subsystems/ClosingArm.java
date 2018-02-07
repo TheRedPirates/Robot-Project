@@ -4,8 +4,10 @@ import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
+// CR see comments on Climber
+// CR rename
 public class ClosingArm extends Subsystem {
-	SpeedController closer;
+	SpeedController closer; // CR you need a better name
 	DigitalInput open;
 	DigitalInput closed;
 

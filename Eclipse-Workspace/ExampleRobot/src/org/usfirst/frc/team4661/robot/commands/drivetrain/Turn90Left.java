@@ -6,6 +6,7 @@ import org.usfirst.frc.team4661.robot.StringConsts;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+// CR make one command with Turn90Right.
 public class Turn90Left extends Command {
 	double timeout;
 

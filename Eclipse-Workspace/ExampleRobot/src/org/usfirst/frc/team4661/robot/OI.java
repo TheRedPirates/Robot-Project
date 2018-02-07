@@ -27,6 +27,8 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class OI { // gevald
 	Joystick leftJoystick;
 	Joystick rightJoystick;
+	
+	 // CR all variables below this don't need to be fields. Make them local.
 	JoystickButton driveStraightButton;
 	JoystickButton rotateButton;
 	JoystickButton closeLeftArmButton;
@@ -52,6 +54,9 @@ public class OI { // gevald
 
 		int driveStraight = (int) SmartDashboard.getNumber(StringConsts.DRIVE_STRAIGHT_BUTTON, 1);
 		String straightJoystick = SmartDashboard.getString(StringConsts.DRIVE_STRAIGHT_JOYSTICK, "right");
+		
+		// CR use SendableChooser instead of String. see:
+		// https://github.com/wpilibsuite/allwpilib/blob/master/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/templates/commandbased/Robot.java
 		if (straightJoystick == "right") {
 			driveStraightButton = new JoystickButton(rightJoystick, driveStraight);
 

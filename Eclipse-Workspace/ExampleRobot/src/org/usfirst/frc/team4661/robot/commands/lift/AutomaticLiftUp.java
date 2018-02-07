@@ -5,6 +5,7 @@ import org.usfirst.frc.team4661.robot.StringConsts;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+// CR see comments on AutomaticLiftDown
 public class AutomaticLiftUp extends Command {
 	double timeout;
 	double speedValue;

@@ -5,13 +5,14 @@ import org.usfirst.frc.team4661.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
+
 public class ClimbDown extends Command {
 	public ClimbDown() {
 		requires(Robot.climber);
 	}
 
 	protected void initialize() {
-		// Could potentially add a timeout
+		// Could potentially add a timeout // CR delete this comment.
 
 	}
 
@@ -24,7 +25,7 @@ public class ClimbDown extends Command {
 	@Override
 	protected boolean isFinished() {
 		// TODO Auto-generated method stub
-		return Robot.climber.isDown(); // execute already checks for this
+		return Robot.climber.isDown(); // execute already checks for this 
 	}
 
 	protected void end() {

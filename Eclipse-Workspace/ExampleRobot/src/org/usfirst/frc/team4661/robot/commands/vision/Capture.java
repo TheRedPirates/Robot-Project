@@ -20,8 +20,13 @@ public class Capture extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	
+    	// CR add a boolean on SmartDashboard that tells the program whether to run
+    	// the iteration or not - capturing and sending is very time consuming, we need
+    	// to be able to toggle it.
+    	
     	vision.doIteration();
-    	SmartDashboard.putNumber("time", this.timeSinceInitialized());
+    	SmartDashboard.putNumber("time", this.timeSinceInitialized()); // CR no need for this line anymore.
     	SmartDashboard.putData(this);
     	SmartDashboard.putData(vision);
     	}

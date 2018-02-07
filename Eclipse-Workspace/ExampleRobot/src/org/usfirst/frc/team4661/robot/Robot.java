@@ -60,7 +60,7 @@ public class Robot extends IterativeRobot {
 
 	@Override
 	public void robotInit() {
-		System.out.println(" roobot init  ---");
+		System.out.println(" roobot init  ---"); // CR we don't need this anymore
 
 		vision = new Vision(CameraServer.getInstance().startAutomaticCapture());
 
@@ -83,7 +83,7 @@ public class Robot extends IterativeRobot {
 		drive = new DriveTrain(left, right);
 		SmartDashboard.putData(drive);
 
-		Talon climbingArm = new Talon(RobotMap.CLIMBER_SPEED_CONTROLLER_PORT);
+		Talon climbingArm = new Talon(RobotMap.CLIMBER_SPEED_CONTROLLER_PORT); //CR why "arm"? 
 		DigitalInput climbUpLimit = new DigitalInput(RobotMap.CLIMB_MAX_MICRO_SWITCH_PORT);
 		DigitalInput climbDownLimit = new DigitalInput(RobotMap.CLIMB_MIN_MICRO_SWITCH_PORT);
 		climber = new Climber(climbingArm, climbUpLimit, climbDownLimit);
@@ -110,7 +110,7 @@ public class Robot extends IterativeRobot {
 		SmartDashboard.putData(autoArmOpen);
 		SmartDashboard.putData(autoLiftUp);
 		SmartDashboard.putData(autoLiftDown);
-		SmartDashboard.putData("Auto mode", chooser);
+		SmartDashboard.putData("Auto mode", chooser); //CR move to StringConsts
 
 		oi = new OI();
 	}

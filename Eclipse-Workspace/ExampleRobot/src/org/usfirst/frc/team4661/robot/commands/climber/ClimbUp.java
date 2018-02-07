@@ -4,7 +4,7 @@ import org.usfirst.frc.team4661.robot.Conts;
 import org.usfirst.frc.team4661.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
-
+// CR see comments on ClimbUp
 public class ClimbUp extends Command {
 	public ClimbUp() {
 		requires(Robot.climber);

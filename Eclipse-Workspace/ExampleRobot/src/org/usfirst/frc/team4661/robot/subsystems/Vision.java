@@ -40,7 +40,7 @@ public class Vision extends Subsystem {
 	}
 
 	public void doIteration() {
-		// Mats are very memory expensive. Lets reuse this Mat.
+		// CR make mat a field and move the initialization to the c'tor.
 		Mat mat = new Mat();
 
 		if (sink.grabFrame(mat) == 0) {
@@ -50,8 +50,9 @@ public class Vision extends Subsystem {
 			return;
 		}
 		
+		// CR remove these two lines. We don't need this anymore.
 		String str = ""+ Timer.getFPGATimestamp();
-		Imgproc.putText(mat, str, new Point(320,240), 0,3, new Scalar(0,0,255));
+		Imgproc.putText(mat, str, new Point(320,240), 0,3, new Scalar(0,0,255)); 
 		
 		// Give the output stream a new image to display
 		output.putFrame(mat);

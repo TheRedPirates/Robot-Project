@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
+//CR see comments on Climber.
 public class Lift extends Subsystem {
 	DigitalInput down, up;
 	SpeedController lift;

@@ -27,7 +27,7 @@ public class DriveStraightByJoystick extends Command {
 			speedValue = 0;
 		}
 
-		speedValue *= Math.abs(speedValue);
+		speedValue *= Math.abs(speedValue); // CR add comment that explains WHY.
 
 		Robot.drive.tank(speedValue, speedValue);
 	}

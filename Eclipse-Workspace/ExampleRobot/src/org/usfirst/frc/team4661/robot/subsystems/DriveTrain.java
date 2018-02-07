@@ -14,7 +14,7 @@ public class DriveTrain extends Subsystem {
 	public DriveTrain(GearBox left, GearBox right) {
 		this.left = left;
 		this.right = right;
-		if (!SmartDashboard.containsKey(StringConsts.DRIVETRAIN_LIMIT)) {
+		if (!SmartDashboard.containsKey(StringConsts.DRIVETRAIN_LIMIT)) { // CR we don't need this limit anymore.
 			SmartDashboard.putNumber(StringConsts.DRIVETRAIN_LIMIT, 0.4);
 		}
 		if (!SmartDashboard.containsKey(StringConsts.LEFT_CORRECTION)) {
@@ -23,7 +23,7 @@ public class DriveTrain extends Subsystem {
 	}
 
 	public void tank(double leftSpeed, double rightSpeed) {
-
+		// CR you already ensured these exist in the c'tor. Remember: DRY - don't repeat yourselves.
 		if (!SmartDashboard.containsKey(StringConsts.LEFT_CORRECTION)) {
 			SmartDashboard.putNumber(StringConsts.LEFT_CORRECTION, 1);
 		}
@@ -34,7 +34,7 @@ public class DriveTrain extends Subsystem {
 		double factor = SmartDashboard.getNumber(StringConsts.DRIVETRAIN_LIMIT, 1);
 
 		leftSpeed *= factor * correction;
-		rightSpeed *= factor;
+		rightSpeed *= factor;  // CR we don't need this limit anymore.
 
 		left.set(leftSpeed);
 		right.set(-rightSpeed);

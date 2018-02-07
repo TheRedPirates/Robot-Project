@@ -18,6 +18,9 @@ public class RobotMap {
 	// following variables to use with your drivetrain subsystem.
 	// public static int leftMotor = 1;
 	// public static int rightMotor = 2;
+	
+	// CR rename ALL of these. Decide on a naming scheme that makes sense and follow it.
+	
 	public final static int CLOSING_ARM_SPEED_CONTROLLER_PORT = 4;
 	public final static int LEFT_REAR_TALON_PORT = 3;
 	public final static int RIGHT_REAR_TALON_PORT = 1;

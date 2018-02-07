@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
-public class OpeningArm extends Subsystem {
+public class OpeningArm extends Subsystem { // CR wait, what's the difference between this and ClosingArm?
 	SpeedController closer;
 	DigitalInput open;
 	DigitalInput closed;

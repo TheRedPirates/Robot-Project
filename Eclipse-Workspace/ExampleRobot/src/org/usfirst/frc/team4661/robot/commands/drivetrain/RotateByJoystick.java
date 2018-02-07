@@ -5,6 +5,7 @@ import org.usfirst.frc.team4661.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
+// CR see comments on DriveStraightByJoystick.
 public class RotateByJoystick extends Command {
 
 	public RotateByJoystick() {

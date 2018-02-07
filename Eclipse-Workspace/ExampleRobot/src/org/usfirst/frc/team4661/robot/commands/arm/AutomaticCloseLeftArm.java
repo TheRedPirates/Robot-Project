@@ -5,7 +5,7 @@ import org.usfirst.frc.team4661.robot.StringConsts;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
-public class AutomaticCloseLeftArm extends Command {
+public class AutomaticCloseLeftArm extends Command { // CR the two arms are one subsystem!!!
 	double timeout;
 	double speedValue;
 

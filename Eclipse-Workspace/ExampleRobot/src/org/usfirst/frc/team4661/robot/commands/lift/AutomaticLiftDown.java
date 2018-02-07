@@ -21,7 +21,7 @@ public class AutomaticLiftDown extends Command {
 
 	protected void initialize() {
 		if (!SmartDashboard.containsKey(StringConsts.LIFT_DURATION)) {
-			SmartDashboard.putNumber(StringConsts.LIFT_DURATION, 0.5);
+			SmartDashboard.putNumber(StringConsts.LIFT_DURATION, 0.5); // CR half a second? ha!
 		}
 		if (!SmartDashboard.containsKey(StringConsts.LIFT_SPEED)) {
 			SmartDashboard.putNumber(StringConsts.LIFT_SPEED, 0.4);
@@ -29,7 +29,7 @@ public class AutomaticLiftDown extends Command {
 		timeout = SmartDashboard.getNumber(StringConsts.LIFT_DURATION, 0.5);
 		speedValue = SmartDashboard.getNumber(StringConsts.LIFT_SPEED, 0.4);
 		setTimeout(timeout);
-		// Could potentially add a timeout
+		// Could potentially add a timeout // CR delete this comment - you already did this ;)
 	}
 
 	// Called repeatedly when this Command is scheduled to run

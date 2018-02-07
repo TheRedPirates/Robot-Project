@@ -13,7 +13,7 @@ public class LiftUp extends Command {
 	}
 
 	protected void initialize() {
-		// Could potentially add a timeout
+		// Could potentially add a timeout // CR delete this comment.
 
 	}
 

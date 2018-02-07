@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class Climber extends Subsystem {
 	SpeedController lifter;
-	DigitalInput lifted;
+	DigitalInput lifted; // CR be consistent: the opposite of "down" is "up"!
 	DigitalInput down;
 
 	public Climber(SpeedController lifter, DigitalInput lifted, DigitalInput down) {
@@ -15,6 +15,8 @@ public class Climber extends Subsystem {
 		this.lifter = lifter;
 	}
 
+	// CR the code needs to handle case when the DigitalInput is null:
+	// the isLifted method needs to return false always in this case.
 	public boolean isLifted() {
 		return lifted.get();
 	}
